@@ -1,0 +1,22 @@
+thresholds:
+  rule_block: 2
+  semantic_block: 0.75
+  final_risk_block: 0.70
+  final_risk_mask: 0.30
+  pii_confidence_min: 0.60
+
+weights:
+  pii_weight: 0.15
+  secret_weight: 0.20
+
+policy:
+  allow_label: "ALLOW"
+  mask_label: "MASK"
+  block_label: "BLOCK"
+
+languages:
+  supported: ["en", "ur", "ko", "mixed"]
+
+logging:
+  audit_log_file: "results/audit_log.jsonl"
+  log_level: "INFO"
